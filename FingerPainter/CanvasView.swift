@@ -19,5 +19,13 @@ class CanvasView: UIView {//
         CGContextAddLineToPoint(context, 150, 400)
         CGContextStrokePath(context)
     }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+            // print message with breakpoint here
+    }
+    
+    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+            // print message with breakpoint here
+    }
 
 }//
