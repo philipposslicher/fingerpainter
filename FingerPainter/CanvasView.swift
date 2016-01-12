@@ -12,7 +12,7 @@ class CanvasView: UIView {//
  
     override func drawRect(rect: CGRect) {
         let context = UIGraphicsGetCurrentContext()
-        CGContextSetStrokeColorWithColor(context, UIColor.magentaColor().CGColor)
+        CGContextSetStrokeColorWithColor(context, UIColor.orangeColor().CGColor)
         CGContextSetLineWidth(context, 10)
         CGContextBeginPath(context)
         CGContextMoveToPoint(context, 0, 0)
@@ -20,12 +20,6 @@ class CanvasView: UIView {//
         CGContextStrokePath(context)
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-            // print message with breakpoint here
-    }
-    
-    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
-            // print message with breakpoint here
-    }
+
 
 }//
