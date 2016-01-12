@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF7625B61C44E57400706F15 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7625B51C44E57400706F15 /* CanvasView.swift */; };
 		F9087F861B1C613700767FD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9087F851B1C613700767FD3 /* AppDelegate.swift */; };
 		F9087F881B1C613700767FD3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9087F871B1C613700767FD3 /* ViewController.swift */; };
 		F9087F8B1B1C613700767FD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9087F891B1C613700767FD3 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF7625B51C44E57400706F15 /* CanvasView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 		F9087F801B1C613700767FD3 /* FingerPainter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FingerPainter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9087F841B1C613700767FD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9087F851B1C613700767FD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				F9087F851B1C613700767FD3 /* AppDelegate.swift */,
 				F9087F871B1C613700767FD3 /* ViewController.swift */,
 				F9087F891B1C613700767FD3 /* Main.storyboard */,
+				BF7625B51C44E57400706F15 /* CanvasView.swift */,
 				F9087F8C1B1C613700767FD3 /* Images.xcassets */,
 				F9087F8E1B1C613700767FD3 /* LaunchScreen.xib */,
 				F9087F831B1C613700767FD3 /* Supporting Files */,
@@ -215,6 +218,7 @@
 			files = (
 				F9087F881B1C613700767FD3 /* ViewController.swift in Sources */,
 				F9087F861B1C613700767FD3 /* AppDelegate.swift in Sources */,
+				BF7625B61C44E57400706F15 /* CanvasView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,11 +16,49 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6OU-ai-nJD">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem title="Clear" id="kvm-Aq-FRG"/>
+                                </items>
+                            </toolbar>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KJ9-TS-h8j" customClass="CanvasView" customModule="FingerPainter" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6OU-ai-nJD" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Ik0-8d-ups"/>
+                            <constraint firstItem="6OU-ai-nJD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="WpH-dQ-9Kf"/>
+                            <constraint firstItem="6OU-ai-nJD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ZOU-Fa-H8J"/>
+                            <constraint firstAttribute="trailing" secondItem="6OU-ai-nJD" secondAttribute="trailing" id="acc-aF-oUA"/>
+                            <constraint firstAttribute="trailing" secondItem="6OU-ai-nJD" secondAttribute="trailing" id="gcT-ax-S86"/>
+                            <constraint firstItem="6OU-ai-nJD" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="r5m-OO-N0p"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="WpH-dQ-9Kf"/>
+                                <exclude reference="gcT-ax-S86"/>
+                                <exclude reference="r5m-OO-N0p"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="Ik0-8d-ups"/>
+                                <include reference="WpH-dQ-9Kf"/>
+                                <exclude reference="ZOU-Fa-H8J"/>
+                                <exclude reference="acc-aF-oUA"/>
+                                <include reference="gcT-ax-S86"/>
+                                <include reference="r5m-OO-N0p"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="245" y="349"/>
         </scene>
     </scenes>
 </document>
