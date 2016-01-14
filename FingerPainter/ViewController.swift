@@ -11,6 +11,9 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var canvas: UIImageView!
     
+    @IBAction func clearImage(sender: UIBarButtonItem) {
+        canvas.image = nil
+    }
     var start: CGPoint?
     
     override func viewDidLoad() {

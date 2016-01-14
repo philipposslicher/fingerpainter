@@ -20,7 +20,11 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6OU-ai-nJD">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
-                                    <barButtonItem title="Clear" id="kvm-Aq-FRG"/>
+                                    <barButtonItem title="Clear" id="kvm-Aq-FRG">
+                                        <connections>
+                                            <action selector="clearImage:" destination="BYZ-38-t0r" id="Jkq-Qn-vxo"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AkK-Qm-oR8">
