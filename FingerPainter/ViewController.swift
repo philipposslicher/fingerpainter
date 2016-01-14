@@ -36,8 +36,7 @@ class ViewController: UIViewController {
             height: canvas.frame.size.height))
         // draw the new line segment
         CGContextSetLineWidth(context, 5)
-        CGContextSetStrokeColorWithColor(context,
-            UIColor.magentaColor().CGColor)
+        CGContextSetStrokeColorWithColor(context, UIColor.blackColor().CGColor)
         CGContextBeginPath(context)
         CGContextMoveToPoint(context, start.x, start.y)
         CGContextAddLineToPoint(context, end.x, end.y)

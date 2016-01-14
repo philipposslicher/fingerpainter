@@ -20,6 +20,13 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6OU-ai-nJD">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
+                                    <barButtonItem style="plain" id="jvQ-HM-Lrq">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="agI-5j-T3O">
+                                            <rect key="frame" x="20" y="4" width="27" height="36"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="menu-alt-512"/>
+                                        </button>
+                                    </barButtonItem>
                                     <barButtonItem title="Clear" id="kvm-Aq-FRG">
                                         <connections>
                                             <action selector="clearImage:" destination="BYZ-38-t0r" id="Jkq-Qn-vxo"/>
@@ -71,4 +78,7 @@
             <point key="canvasLocation" x="245" y="349"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="menu-alt-512" width="512" height="512"/>
+    </resources>
 </document>
