@@ -23,17 +23,21 @@
                                     <barButtonItem title="Clear" id="kvm-Aq-FRG"/>
                                 </items>
                             </toolbar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AkK-Qm-oR8" customClass="CanvasView">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AkK-Qm-oR8">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="6OU-ai-nJD" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Ik0-8d-ups"/>
+                            <constraint firstItem="AkK-Qm-oR8" firstAttribute="trailing" secondItem="6OU-ai-nJD" secondAttribute="trailing" id="Mif-W9-IoE"/>
+                            <constraint firstItem="AkK-Qm-oR8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Rji-d2-8FB"/>
                             <constraint firstItem="6OU-ai-nJD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="WpH-dQ-9Kf"/>
                             <constraint firstItem="6OU-ai-nJD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ZOU-Fa-H8J"/>
                             <constraint firstAttribute="trailing" secondItem="6OU-ai-nJD" secondAttribute="trailing" id="acc-aF-oUA"/>
                             <constraint firstAttribute="trailing" secondItem="6OU-ai-nJD" secondAttribute="trailing" id="gcT-ax-S86"/>
+                            <constraint firstItem="AkK-Qm-oR8" firstAttribute="bottom" secondItem="6OU-ai-nJD" secondAttribute="top" id="kHM-OW-KwH"/>
+                            <constraint firstItem="AkK-Qm-oR8" firstAttribute="leading" secondItem="6OU-ai-nJD" secondAttribute="leading" id="qKi-ch-8ol"/>
                             <constraint firstItem="6OU-ai-nJD" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="r5m-OO-N0p"/>
                         </constraints>
                         <variation key="default">
