@@ -10,6 +10,10 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var canvas: UIImageView!
+    //Sliders
+    @IBOutlet weak var redSlider: UISlider!
+    @IBOutlet weak var greenSlider: UISlider!
+    @IBOutlet weak var blueSlider: UISlider!
     
     @IBAction func clearImage(sender: UIBarButtonItem) {
         canvas.image = nil
@@ -40,6 +44,7 @@ class ViewController: UIViewController {
         CGContextBeginPath(context)
         CGContextMoveToPoint(context, start.x, start.y)
         CGContextAddLineToPoint(context, end.x, end.y)
+        CGContextSetLineCap(context, CGLineCap.Round)
         CGContextStrokePath(context)
         // obtain a UIImage object from the context
         let newImage = UIGraphicsGetImageFromCurrentImageContext()

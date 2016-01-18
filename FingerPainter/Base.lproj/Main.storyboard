@@ -17,15 +17,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AkK-Qm-oR8">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
+                            </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6OU-ai-nJD">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
-                                    <barButtonItem style="plain" id="jvQ-HM-Lrq">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="agI-5j-T3O">
-                                            <rect key="frame" x="20" y="4" width="27" height="36"/>
+                                    <barButtonItem style="plain" id="wTx-RX-Utf">
+                                        <slider key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="MvP-Pd-KmM">
+                                            <rect key="frame" x="18" y="6.5" width="118" height="31"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" image="menu-alt-512"/>
-                                        </button>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="114" id="Fkz-mA-mZM"/>
+                                            </constraints>
+                                        </slider>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" id="kB4-Kz-xAe">
+                                        <view key="customView" contentMode="scaleToFill" id="69e-WZ-R0g">
+                                            <rect key="frame" x="146" y="5.5" width="124" height="33"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
                                     </barButtonItem>
                                     <barButtonItem title="Clear" id="kvm-Aq-FRG">
                                         <connections>
@@ -34,22 +46,45 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AkK-Qm-oR8">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
-                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uz7-uQ-C8S">
+                                <rect key="frame" x="0.0" y="512" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" id="asb-zb-2xa">
+                                        <slider key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="SCH-s7-huH">
+                                            <rect key="frame" x="18" y="6.5" width="118" height="31"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="114" id="S2b-oI-d8S"/>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="114" id="ZYN-X5-SKu"/>
+                                            </constraints>
+                                        </slider>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" id="WZf-it-KBO">
+                                        <slider key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="xNi-lY-fvk">
+                                            <rect key="frame" x="146" y="6.5" width="118" height="31"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="tintColor" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </slider>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Uz7-uQ-C8S" firstAttribute="trailing" secondItem="6OU-ai-nJD" secondAttribute="trailing" id="IW8-W7-9hV"/>
                             <constraint firstItem="6OU-ai-nJD" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Ik0-8d-ups"/>
                             <constraint firstItem="AkK-Qm-oR8" firstAttribute="trailing" secondItem="6OU-ai-nJD" secondAttribute="trailing" id="Mif-W9-IoE"/>
                             <constraint firstItem="AkK-Qm-oR8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Rji-d2-8FB"/>
                             <constraint firstItem="6OU-ai-nJD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="WpH-dQ-9Kf"/>
+                            <constraint firstItem="Uz7-uQ-C8S" firstAttribute="leading" secondItem="6OU-ai-nJD" secondAttribute="leading" id="Xst-Sw-iP2"/>
                             <constraint firstItem="6OU-ai-nJD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ZOU-Fa-H8J"/>
                             <constraint firstAttribute="trailing" secondItem="6OU-ai-nJD" secondAttribute="trailing" id="acc-aF-oUA"/>
                             <constraint firstAttribute="trailing" secondItem="6OU-ai-nJD" secondAttribute="trailing" id="gcT-ax-S86"/>
                             <constraint firstItem="AkK-Qm-oR8" firstAttribute="bottom" secondItem="6OU-ai-nJD" secondAttribute="top" id="kHM-OW-KwH"/>
                             <constraint firstItem="AkK-Qm-oR8" firstAttribute="leading" secondItem="6OU-ai-nJD" secondAttribute="leading" id="qKi-ch-8ol"/>
                             <constraint firstItem="6OU-ai-nJD" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="r5m-OO-N0p"/>
+                            <constraint firstItem="Uz7-uQ-C8S" firstAttribute="bottom" secondItem="6OU-ai-nJD" secondAttribute="top" id="wz9-3j-v3I"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -70,15 +105,15 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="blueSlider" destination="MvP-Pd-KmM" id="4TE-vo-sOC"/>
                         <outlet property="canvas" destination="AkK-Qm-oR8" id="1Iw-Oj-pZy"/>
+                        <outlet property="greenSlider" destination="WZf-it-KBO" id="Jak-Yl-9YW"/>
+                        <outlet property="redSlider" destination="asb-zb-2xa" id="Ozr-nd-6ST"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="245" y="349"/>
+            <point key="canvasLocation" x="233" y="379"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="menu-alt-512" width="512" height="512"/>
-    </resources>
 </document>
