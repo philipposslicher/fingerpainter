@@ -24,6 +24,7 @@ class ViewController: UIViewController {
     var blue: CGFloat = 0.5
     var green: CGFloat = 0.5
     
+    
     let context = UIGraphicsGetCurrentContext()
     
     
@@ -42,6 +43,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        colorView.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: 1)
     }
 
     override func didReceiveMemoryWarning() {
