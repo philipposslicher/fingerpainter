@@ -37,6 +37,16 @@
                                             <action selector="clearImage:" destination="BYZ-38-t0r" id="Jkq-Qn-vxo"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem style="plain" id="i3M-JX-6dh">
+                                        <slider key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="20" id="hs6-iy-8wo">
+                                            <rect key="frame" x="197" y="6.5" width="118" height="31"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="colorChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="tTf-1W-B5R"/>
+                                            </connections>
+                                        </slider>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uz7-uQ-C8S">
@@ -81,7 +91,7 @@
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AkK-Qm-oR8">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="512"/>
+                                <rect key="frame" x="0.0" y="35" width="600" height="477"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -96,8 +106,8 @@
                             <constraint firstItem="bLl-eR-TGh" firstAttribute="trailing" secondItem="Uz7-uQ-C8S" secondAttribute="trailing" id="bGM-AY-mVA"/>
                             <constraint firstAttribute="trailing" secondItem="6OU-ai-nJD" secondAttribute="trailing" id="gcT-ax-S86"/>
                             <constraint firstItem="AkK-Qm-oR8" firstAttribute="leading" secondItem="Uz7-uQ-C8S" secondAttribute="leading" id="hI5-aZ-BRP"/>
-                            <constraint firstItem="AkK-Qm-oR8" firstAttribute="top" secondItem="bLl-eR-TGh" secondAttribute="top" id="lEC-5d-YEf"/>
-                            <constraint firstItem="AkK-Qm-oR8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="p1n-hm-Pmo"/>
+                            <constraint firstItem="AkK-Qm-oR8" firstAttribute="top" secondItem="bLl-eR-TGh" secondAttribute="top" constant="35" id="lEC-5d-YEf"/>
+                            <constraint firstItem="AkK-Qm-oR8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="35" id="p1n-hm-Pmo"/>
                             <constraint firstItem="6OU-ai-nJD" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="r5m-OO-N0p"/>
                             <constraint firstItem="AkK-Qm-oR8" firstAttribute="leading" secondItem="bLl-eR-TGh" secondAttribute="leading" id="t3z-rp-y8t"/>
                             <constraint firstItem="AkK-Qm-oR8" firstAttribute="bottom" secondItem="Uz7-uQ-C8S" secondAttribute="top" id="teW-nG-Nih"/>
@@ -127,6 +137,7 @@
                         <outlet property="colorView" destination="bLl-eR-TGh" id="Jhz-Jo-qx9"/>
                         <outlet property="greenSlider" destination="xNi-lY-fvk" id="eOz-bE-3Tj"/>
                         <outlet property="redSlider" destination="SCH-s7-huH" id="ctX-sc-efr"/>
+                        <outlet property="widthSlider" destination="hs6-iy-8wo" id="Qwe-cB-hhK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

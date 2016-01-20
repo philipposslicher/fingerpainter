@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var redSlider: UISlider!
     @IBOutlet weak var greenSlider: UISlider!
     @IBOutlet weak var blueSlider: UISlider!
+    @IBOutlet weak var widthSlider: UISlider!
     
     //Outlet for color preview
     @IBOutlet weak var colorView: UIImageView!
@@ -23,6 +24,7 @@ class ViewController: UIViewController {
     var red: CGFloat = 0.5
     var blue: CGFloat = 0.5
     var green: CGFloat = 0.5
+    var width: CGFloat = 1
     
     
     let context = UIGraphicsGetCurrentContext()
@@ -32,6 +34,7 @@ class ViewController: UIViewController {
         red = CGFloat(redSlider.value)
         green = CGFloat(greenSlider.value)
         blue = CGFloat(blueSlider.value)
+        width = CGFloat(widthSlider.value)
         colorView.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: 1)
     }
     
@@ -60,7 +63,7 @@ class ViewController: UIViewController {
             width: canvas.frame.size.width,
             height: canvas.frame.size.height))
         // draw the new line segment
-        CGContextSetLineWidth(context, 5)
+        CGContextSetLineWidth(context, width)
         CGContextSetRGBStrokeColor(context, red, green, blue, 1)
         CGContextBeginPath(context)
         CGContextMoveToPoint(context, start.x, start.y)
