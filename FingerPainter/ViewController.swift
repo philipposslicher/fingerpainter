@@ -16,6 +16,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var greenSlider: UISlider!
     @IBOutlet weak var blueSlider: UISlider!
     
+    //Outlet for color preview
+    @IBOutlet weak var colorView: UIImageView!
+    
+    //Slider colors config
     var red: CGFloat = 0.5
     var blue: CGFloat = 0.5
     var green: CGFloat = 0.5
@@ -27,7 +31,7 @@ class ViewController: UIViewController {
         red = CGFloat(redSlider.value)
         green = CGFloat(greenSlider.value)
         blue = CGFloat(blueSlider.value)
-        
+        colorView.backgroundColor = UIColor(red: red, green: green, blue: blue, alpha: 1)
     }
     
     @IBAction func clearImage(sender: UIBarButtonItem) {
