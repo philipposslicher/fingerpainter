@@ -10,12 +10,17 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var canvas: UIImageView!
+    
     //Sliders
     @IBOutlet weak var redSlider: UISlider!
     @IBOutlet weak var greenSlider: UISlider!
     @IBOutlet weak var blueSlider: UISlider!
-
-    var color = 
+    
+    var red: CGFloat = 0.5
+    var blue: CGFloat = 0.5
+    var green: CGFloat = 0.5
+    
+    let context = UIGraphicsGetCurrentContext()
     
     @IBAction func clearImage(sender: UIBarButtonItem) {
         canvas.image = nil
@@ -42,7 +47,7 @@ class ViewController: UIViewController {
             height: canvas.frame.size.height))
         // draw the new line segment
         CGContextSetLineWidth(context, 5)
-        CGContextSetStrokeColorWithColor(context, UIColor.blackColor().CGColor)
+        CGContextSetRGBStrokeColor(context, red, green, blue, 1)
         CGContextBeginPath(context)
         CGContextMoveToPoint(context, start.x, start.y)
         CGContextAddLineToPoint(context, end.x, end.y)
@@ -74,5 +79,10 @@ class ViewController: UIViewController {
             }
     }
 
+    @IBAction func colorChange(sender: AnyObject) {
+        red = CGFloat(redSlider.value)
+        blue = CGFloat(blueSlider.value)
+        green = CGFloat(greenSlider.value)
+    }
 }
 
