@@ -20,35 +20,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AkK-Qm-oR8">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
                             </imageView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6OU-ai-nJD">
-                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
-                                <items>
-                                    <barButtonItem style="plain" id="wTx-RX-Utf">
-                                        <slider key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="MvP-Pd-KmM">
-                                            <rect key="frame" x="18" y="6.5" width="118" height="31"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="114" id="Fkz-mA-mZM"/>
-                                            </constraints>
-                                        </slider>
-                                        <connections>
-                                            <action selector="colorChange:" destination="BYZ-38-t0r" id="orC-se-yGS"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" id="kB4-Kz-xAe">
-                                        <view key="customView" contentMode="scaleToFill" id="69e-WZ-R0g">
-                                            <rect key="frame" x="146" y="5.5" width="124" height="33"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </view>
-                                    </barButtonItem>
-                                    <barButtonItem title="Clear" id="kvm-Aq-FRG">
-                                        <connections>
-                                            <action selector="clearImage:" destination="BYZ-38-t0r" id="Jkq-Qn-vxo"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uz7-uQ-C8S">
                                 <rect key="frame" x="0.0" y="512" width="600" height="44"/>
                                 <items>
@@ -61,6 +32,9 @@
                                                 <constraint firstAttribute="width" constant="114" id="S2b-oI-d8S"/>
                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="114" id="ZYN-X5-SKu"/>
                                             </constraints>
+                                            <connections>
+                                                <action selector="colorChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="JQ1-wT-FxZ"/>
+                                            </connections>
                                         </slider>
                                         <connections>
                                             <action selector="colorChange:" destination="BYZ-38-t0r" id="qkI-cv-deq"/>
@@ -71,9 +45,41 @@
                                             <rect key="frame" x="146" y="6.5" width="118" height="31"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="tintColor" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="colorChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="7kw-GY-l3g"/>
+                                            </connections>
                                         </slider>
                                         <connections>
                                             <action selector="colorChange:" destination="BYZ-38-t0r" id="XDE-r3-GnA"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6OU-ai-nJD">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" id="wTx-RX-Utf">
+                                        <slider key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="MvP-Pd-KmM">
+                                            <rect key="frame" x="18" y="6.5" width="118" height="31"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="114" id="Fkz-mA-mZM"/>
+                                            </constraints>
+                                            <connections>
+                                                <action selector="colorChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="QW4-IK-L2j"/>
+                                            </connections>
+                                        </slider>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" id="kB4-Kz-xAe">
+                                        <view key="customView" contentMode="scaleToFill" id="69e-WZ-R0g">
+                                            <rect key="frame" x="146" y="5.5" width="124" height="33"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </barButtonItem>
+                                    <barButtonItem title="Clear" id="kvm-Aq-FRG">
+                                        <connections>
+                                            <action selector="clearImage:" destination="BYZ-38-t0r" id="Jkq-Qn-vxo"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -114,10 +120,10 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="blueSlider" destination="MvP-Pd-KmM" id="4TE-vo-sOC"/>
+                        <outlet property="blueSlider" destination="MvP-Pd-KmM" id="dEV-ck-Yb3"/>
                         <outlet property="canvas" destination="AkK-Qm-oR8" id="1Iw-Oj-pZy"/>
-                        <outlet property="greenSlider" destination="WZf-it-KBO" id="Jak-Yl-9YW"/>
-                        <outlet property="redSlider" destination="asb-zb-2xa" id="Ozr-nd-6ST"/>
+                        <outlet property="greenSlider" destination="xNi-lY-fvk" id="eOz-bE-3Tj"/>
+                        <outlet property="redSlider" destination="SCH-s7-huH" id="ctX-sc-efr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

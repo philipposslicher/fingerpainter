@@ -22,6 +22,14 @@ class ViewController: UIViewController {
     
     let context = UIGraphicsGetCurrentContext()
     
+    
+    @IBAction func colorChange(sender: AnyObject) {
+        red = CGFloat(redSlider.value)
+        green = CGFloat(greenSlider.value)
+        blue = CGFloat(blueSlider.value)
+        
+    }
+    
     @IBAction func clearImage(sender: UIBarButtonItem) {
         canvas.image = nil
     }
@@ -79,10 +87,5 @@ class ViewController: UIViewController {
             }
     }
 
-    @IBAction func colorChange(sender: AnyObject) {
-        red = CGFloat(redSlider.value)
-        blue = CGFloat(blueSlider.value)
-        green = CGFloat(greenSlider.value)
-    }
 }
 
